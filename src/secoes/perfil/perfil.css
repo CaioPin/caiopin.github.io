@@ -1,0 +1,163 @@
+.perfil {
+    padding-bottom: 24px;
+}
+
+.perfil_informacoes {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 80px;
+}
+
+.perfil_informacoes_imagem {
+    clip-path: polygon(50% 0%, 82.14% 11.7%, 99.24% 41.32%, 93.3% 75%, 67.1% 96.99%, 32.9% 96.99%, 6.7% 75%, 0.76% 41.32%, 17.86% 11.7%);
+    aspect-ratio: 1;
+    width: 200px;
+}
+
+.perfil_informacoes_pessoais {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.perfil_informacoes_pessoais_contatos {
+    font-size: 2.4rem;
+    font-weight: 500;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 80px;
+    row-gap: 16px;
+}
+
+.perfil_informacoes_pessoais_contatos_contato {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.perfil_idiomas {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 24px;
+    column-gap: 80px;
+}
+
+.perfil_idioma {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.perfil_idioma_titulo {
+    text-align: center;
+    font-weight: 500;
+}
+
+.perfil_idioma_notas_musicais {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 96px;
+    width: 160px;
+}
+
+.perfil_idioma_notas_musicais::before, .perfil_idioma_notas_musicais::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background-color: var(--preto);
+    border-radius: 16px;
+    width: 160px;
+    height: 4px;
+}
+
+.perfil_idioma_notas_musicais::before {
+    transform: translateY(-16px);
+}
+
+.perfil_idioma_notas_musicais::after {
+    transform: translateY(16px);
+}
+
+.perfil_idioma_nota-musical {
+    position: relative;
+    background-color: var(--laranja);
+    border-radius: 100%;
+    width: 16px;
+    height: 16px;
+    z-index: 2;
+}
+
+.perfil_idioma_nota-musical[itemprop*="cor:cinza"] {
+    background-color: var(--cinza);
+}
+
+.perfil_idioma_nota-musical:nth-of-type(1) {
+    transform: translateY(calc(48px - (16px * 1)));
+}
+
+.perfil_idioma_nota-musical:nth-of-type(2) {
+    transform: translateY(calc(48px - (16px * 2)));
+}
+
+.perfil_idioma_nota-musical:nth-of-type(3) {
+    transform: translateY(calc(48px - (16px * 3)));
+}
+
+.perfil_idioma_nota-musical:nth-of-type(4) {
+    transform: translateY(calc(48px - (16px * 4)));
+}
+
+.perfil_idioma_nota-musical:nth-of-type(5) {
+    transform: translateY(calc(48px - (16px * 5)));
+}
+
+.perfil_idioma_nota-musical::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    background-color: inherit;
+    right: 0;
+    bottom: 50%;
+    width: 6px;
+    height: 32px;
+}
+
+@media (width < 1024px) {
+    .perfil_informacoes {
+        gap: 40px;
+    }
+
+    .perfil_informacoes_pessoais {
+        gap: 24px;
+    }
+}
+
+@media (width < 768px) {
+    .perfil_informacoes {
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .perfil_informacoes_pessoais {
+        text-align: center;
+        gap: 24px;
+    }
+
+    .perfil_informacoes_pessoais_contatos {
+        font-size: 2rem;
+        justify-content: center;
+        column-gap: 40px;
+    }
+
+    .perfil_informacoes_pessoais_contatos_contato {
+        gap: 8px;
+    }
+
+    .perfil_informacoes_pessoais_contatos_contato_icone {
+        width: 36px;
+    }
+}

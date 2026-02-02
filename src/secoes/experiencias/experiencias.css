@@ -1,0 +1,231 @@
+:root {
+    --tamanho-mes: 16px;
+}
+
+.experiencias {
+    background-color: var(--roxo);
+}
+
+.experiencias * {
+    color: var(--branco);
+}
+
+.experiencias_conteudo {
+    display: flex;
+    gap: 80px;
+}
+
+.experiencias_conteudo_linha-do-tempo {
+    display: flex;
+    gap: 32px;
+    padding: 18px 0;
+}
+
+.experiencias_conteudo_linha-do-tempo > div {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 36px;
+    height: min-content;
+}
+
+.experiencias_conteudo_linha-do-tempo span {
+    display: block;
+    width: 8px;
+}
+
+.experiencias_conteudo_linha-do-tempo button {
+    position: absolute;
+    top: 0;
+    border-radius: 100%;
+    width: 36px;
+    height: 36px;
+    transform: translateY(-18px);
+}
+
+.experiencias_conteudo_linha-do-tempo button:hover {
+    border: 4px solid var(--cinza);
+}
+
+.experiencias_conteudo_linha-do-tempo button[itemprop*="detalhar:true"] {
+    border: 4px solid var(--preto);
+}
+
+.experiencias_conteudo_linha-do-tempo > div > button:last-of-type {
+    top: calc(100% - 36px);
+    transform: translateY(18px);
+}
+
+.experiencias_conteudo_linha-do-tempo_faculdade * {
+    background-color: var(--vermelho);
+}
+
+.experiencias_conteudo_linha-do-tempo_faculdade span {
+    height: calc(54 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej {
+    margin-top: calc(2 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej * {
+    background-color: var(--laranja);
+}
+
+.experiencias_conteudo_linha-do-tempo_mej span {
+    height: calc(39 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(2) {
+    top: calc(6 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(3) {
+    top: calc(19 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(4) {
+    top: calc(30 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(5) {
+    top: calc(33 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_estagio {
+    margin-top: calc(14 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_estagio * {
+    background-color: var(--azul-claro);
+}
+
+.experiencias_conteudo_linha-do-tempo_estagio span {
+    height: calc(18 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_estagio button:nth-of-type(2) {
+    top: calc(3 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_linha-do-tempo_estagio button:nth-of-type(3) {
+    top: calc(11 * var(--tamanho-mes));
+}
+
+.experiencias_conteudo_acontecimentos {
+    display: grid;
+    grid-template-columns: calc(50% - 12px) calc(50% - 12px);
+    gap: 24px;
+    height: min-content;
+}
+
+.experiencias_conteudo_acontecimento {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+    border-radius: 16px;
+    background-color: var(--preto-translucido);
+    height: min-content;
+    padding: 24px;
+}
+
+.experiencias_conteudo_acontecimento:hover {
+    cursor: pointer;
+}
+
+.experiencias_conteudo_acontecimento[itemprop*="detalhar:true"]:hover {
+    cursor: default;
+}
+
+.experiencias_conteudo_acontecimento[itemprop*="detalhar:true"] > .experiencias_conteudo_acontecimento_imagem,
+.experiencias_conteudo_acontecimento[itemprop*="detalhar:true"] > .experiencias_conteudo_acontecimento_descricao {
+    display: block;
+}
+
+.acontecimento_faculdade, .acontecimento_faculdade > .experiencias_conteudo_acontecimento_imagem {
+    border: 2px solid var(--vermelho);
+}
+
+.acontecimento_mej, .acontecimento_mej > .experiencias_conteudo_acontecimento_imagem {
+    border: 2px solid var(--laranja);
+}
+
+.acontecimento_estagio, .acontecimento_estagio > .experiencias_conteudo_acontecimento_imagem {
+    border: 2px solid var(--azul-claro);
+}
+
+.experiencias_conteudo_acontecimento_titulo {
+    text-align: center;
+}
+
+.experiencias_conteudo_acontecimento_imagem {
+    display: none;
+    border-radius: 16px;
+    width: 80%;
+}
+
+.experiencias_conteudo_acontecimento_descricao {
+    display: none;
+}
+
+@media (width < 1024px) {
+    :root {
+        --tamanho-mes: 32px;
+    }
+
+    .experiencias_conteudo {
+        gap: 40px;
+    }
+
+    .experiencias_conteudo_acontecimentos {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (width < 768px) {
+    :root {
+        --tamanho-mes: 24px;
+    }
+
+    .experiencias_conteudo {
+        gap: 24px;
+    }
+
+    .experiencias_conteudo_linha-do-tempo {
+        gap: 8px;
+        padding: 12px 0;
+    }
+
+    .experiencias_conteudo_linha-do-tempo > div {
+        width: 24px;
+    }
+
+    .experiencias_conteudo_linha-do-tempo span {
+        width: 6px;
+    }
+
+    .experiencias_conteudo_linha-do-tempo button {
+        width: 24px;
+        height: 24px;
+        transform: translateY(-12px);
+    }
+
+    .experiencias_conteudo_linha-do-tempo button:hover {
+        border-width: 2px;
+    }
+
+    .experiencias_conteudo_linha-do-tempo button[itemprop*="detalhar:true"] {
+        border-width: 2px;
+    }
+
+    .experiencias_conteudo_linha-do-tempo > div > button:last-of-type {
+        top: calc(100% - 24px);
+        transform: translateY(12px);
+    }
+
+    .experiencias_conteudo_acontecimento {
+        padding: 16px;
+    }
+}
