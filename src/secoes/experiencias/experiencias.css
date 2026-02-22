@@ -81,7 +81,7 @@
 }
 
 .experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(3) {
-    top: calc(19 * var(--tamanho-mes));
+    top: calc(20 * var(--tamanho-mes));
 }
 
 .experiencias_conteudo_linha-do-tempo_mej button:nth-of-type(4) {
@@ -93,7 +93,7 @@
 }
 
 .experiencias_conteudo_linha-do-tempo_estagio {
-    margin-top: calc(14 * var(--tamanho-mes));
+    margin-top: calc(13 * var(--tamanho-mes));
 }
 
 .experiencias_conteudo_linha-do-tempo_estagio * {
@@ -101,15 +101,15 @@
 }
 
 .experiencias_conteudo_linha-do-tempo_estagio span {
-    height: calc(18 * var(--tamanho-mes));
+    height: calc(19 * var(--tamanho-mes));
 }
 
 .experiencias_conteudo_linha-do-tempo_estagio button:nth-of-type(2) {
-    top: calc(3 * var(--tamanho-mes));
+    top: calc(4 * var(--tamanho-mes));
 }
 
 .experiencias_conteudo_linha-do-tempo_estagio button:nth-of-type(3) {
-    top: calc(11 * var(--tamanho-mes));
+    top: calc(12 * var(--tamanho-mes));
 }
 
 .experiencias_conteudo_acontecimentos {

@@ -97,10 +97,6 @@ img {
     to { background-position-x: 1000px; }
 }
 
-@media (width < 1024px) {
-
-}
-
 @media (width < 768px) {
     * {
         font-size: 1.6rem;
